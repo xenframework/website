@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Download and install xenframework in an easy way.">
+    <meta name="author" content="xenframework.com">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <title>Download xenframework</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/sticky-footer-navbar.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/google-code-prettify/prettify.css">
+
+    <style>
+        #logo
+        {
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            font-size: 50px;
+            color: #111;
+        }
+        #footer-text
+        {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="logo" href="/">xenframework</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="/download.html">Download</a></li>
+                <li><a href="https://www.youtube.com/user/xenframework">Youtube</a></li>
+                <li><a href="/documentation/">Documentation</a></li>
+                <li><a href="/community/">Community</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="https://twitter.com/xenframework">Twitter</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+<!-- Begin page content -->
+<div class="container">
+    <div class="page-header">
+        <h1>Download xenframework</h1>
+    </div>
+    <p>
+        <ol class="lead">
+            <li>You want to create a new project</li>
+            <li>You only need the latest version of xenframework</li>
+            <li>You need to update your xenframework installation</li>
+            <li>You want to fork or clone the repositories on GitHub</li>
+        </ol>
+    </p>
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+
+            <h2>Composer</h2>
+            <p>
+                In the first 3 cases you will need <a href="https://getcomposer.org">composer</a>. If you do not have composer already installed run this:
+            </p>
+            <p>
+                <pre>curl -s https://getcomposer.org/installer | php --</pre>
+            </p>
+            <p>
+                more detailed instructions here: <a href="https://getcomposer.org/doc/00-intro.md">https://getcomposer.org/doc/00-intro.md</a>
+            </p>
+
+            <h2>1. Creating a new project</h2>
+            <p>
+                This will create a new project with xenframework and the others dependencies already installed.
+            </p>
+            <p>
+                Install the skeleton-app using composer
+            </p>
+            <p>
+                <pre>php composer.phar create-project -sdev xenframework/skeleton-app myproject</pre>
+            </p>
+            <p>
+                If you did a global install and do not have the phar in that directory run this instead:
+            </p>
+            <p>
+                <pre>composer create-project -sdev xenframework/skeleton-app myproject</pre>
+            </p>
+            <p>
+                more detailed instructions here: <a href="https://github.com/xenframework/skeleton-app/blob/master/README.md">https://github.com/xenframework/skeleton-app/blob/master/README.md</a>
+            </p>
+
+            <h2>2. Getting the latest version of the xen library</h2>
+            <p>
+                Create a <b>composer.json</b> file with this inside:
+            </p>
+            <p>
+            <pre>
+{
+    "require": {
+        "xenframework/xen": "2.0.0.*@dev"
+    }
+}</pre>
+            </p>
+            <p>
+                Now run composer install
+            </p>
+            <p>
+                <pre>php composer.phar install</pre>
+            </p>
+            <p>
+                or if you did a global composer installation
+            </p>
+            <p>
+                <pre>composer install</pre>
+            </p>
+
+            <h2>3. Updating xenframework</h2>
+            <p>
+                You can update single packages. If you only need to update xenframework library located in your vendor directory:
+            </p>
+            <p>
+            <pre>composer.phar update xenframework/xen</pre>
+            </p>
+            <p>
+                more info: <a href="https://getcomposer.org/doc/03-cli.md#update">https://getcomposer.org/doc/03-cli.md#update</a>
+            </p>
+
+            <a name=""></a>
+            <h2 id="github">4. Github</h2>
+            <p>
+                Alternatively you can download, clone or fork the repositories from GitHub:
+            </p>
+            <p>
+                <pre><a href="https://github.com/xenframework">https://github.com/xenframework</a></pre>
+            </p>
+            <p>
+                Take care about each package dependencies (look at the <b>requires</b> section):
+            </p>
+            <p>
+                <ul>
+                    <li><b>skeleton-app</b> - <a href="https://packagist.org/packages/xenframework/skeleton-app">https://packagist.org/packages/xenframework/skeleton-app</a></li>
+                    <li><b>xenframework/xen</b> - <a href="https://packagist.org/packages/xenframework/xen">https://packagist.org/packages/xenframework/xen</a></li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p class="text-muted" id="footer-text">PHP MVC Framework by <a href="https://twitter.com/trascastro">Ismael Trascastro</a></p>
+    </div>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<script src="/google-code-prettify/prettify.js"></script>
+<script>
+    !function ($) {
+        $(function(){
+            window.prettyPrint && prettyPrint()
+        })
+    }(window.jQuery)
+</script>
+</body>
+</html>
